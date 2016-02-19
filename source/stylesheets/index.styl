@@ -50,7 +50,7 @@ body
   background-color $color--grey
   text-align center
   height 100vh
-  min-height 800px
+  min-height 500px
   transform-style preserve-3d
   margin-bottom 5em
   position relative
@@ -204,12 +204,13 @@ body
   text-transform uppercase
   margin-bottom .5em
 
-  &:before
-  &:after
-    content '×'
-    font-size .5em
-    padding .5em 1em
-    vertical-align middle
+  @media (min-width: 800px)
+    &:before
+    &:after
+      content '×'
+      font-size .5em
+      padding .5em 1em
+      vertical-align middle
 
 .available__strapline
   font-size .75em
@@ -252,19 +253,17 @@ body
 
 .open-source__center
   display inline-block
-  font-weight 300
   border 1px solid lighten($color--grey, 80%)
   border-left none
   border-right none
   padding 1em
 
-  .lead
-  .lead a
+.open-source__lead
+  font-weight 300
+  margin-bottom .5em
+
+.open-source__favourites
+  font-size .75em
+
+  a
     font-size 1em
-
-  .lead
-    margin-bottom .5em
-
-  p
-  p a
-    font-size .75em
