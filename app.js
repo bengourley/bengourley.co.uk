@@ -11,4 +11,4 @@ server.get('/', function (req, res, next) {
   })
 })
 
-server.listen(1337)
+server.listen(process.env.PORT || 1337)

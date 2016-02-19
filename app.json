@@ -1,0 +1,9 @@
+{
+  "name": "bengourley",
+  "script": "nave use 4 node app",
+  "instances": 1,
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "1337"
+  }
+}
