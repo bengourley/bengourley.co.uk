@@ -1,0 +1,108 @@
+extend layout
+
+block content
+  .splash
+    .splash__center
+      h1.splash__title Ben Gourley
+      p.splash__subtitle
+        span.splash__subtitle-bit Software Engineer
+        span.splash__subtitle-bit Full Stack Developer
+        span.splash__subtitle-bit JavaScript Expert
+
+  .content-block
+    .content-block__center
+      .intro
+        p
+          | I’m an experienced software engineer, specialising in JavaScript, Node.js and all things web.
+
+  .content-block
+    .content-block__center
+      .list
+        h2.list__title Skills / Buzzwords
+        .ul
+          li javascript
+          li node.js
+          li application architecture
+          li browserify
+          li npm
+          li web apps
+          li interfaces
+          li realtime
+          li testing
+          li ui
+          li git
+          li tdd
+          li remote working
+          li html
+          li jade
+          li css
+          li stylus
+          li mongodb
+          li mocha
+          li tape
+          li open source
+
+  .content-block.work
+    .content-block__center--wide
+      h2.list__title Featured Work
+      .grid
+        .grid__item.desk-one-third
+          .card
+            img(src='/images/avenue-imperial.jpg')
+            h2.card__title Avenue Imperial
+            p.card__description
+              | For Avenue Imperial’s virtual shopping platform I built a realtime chat application for shoppers to communicate with shop assistants.
+              | The assistants manage queues of shoppers, answer questions, take and send pictures and process payments, all from a browser on a tablet.
+
+        .grid__item.desk-one-third
+          .card
+            img(src='/images/shortlist.jpg')
+            h2.card__title ShortList / Stylist
+            p.card__description
+              | For ShortList Media’s magazine duo I led the development of a cutting edge publishing platform. Backed
+              | by a Node API, administered with a snappy single-page web app, the editors now have access to
+              | incredibly powerful widget layouts, image cropping tools and content aggregation.
+
+        .grid__item.desk-one-third
+          .card
+            img(src='/images/nme.jpg')
+            h2.card__title Time Inc.
+            p.card__description
+              | Based on the foundations of the aformentioned publishing platform, I worked on a loyalty
+              | platform for Time Inc.’s 70+ UK magazine brands, including NME and Marie Claire. The platform
+              | enables editors to surface special offers and events to magazine subscribers of any title, all
+              | from one place.
+  .content-block.work
+    .content-block__center--wide
+      .open-source
+        .open-source__center
+          p.lead I’m an active open source developer. Take a look at my modules and contributions on <a href='https://github.com/bengourley'>GitHub</a> and <a href='http://npm.im/~bengourley'>npm</a>.
+          p
+            | My favourites are a <a href='https://github.com/bengourley/anytime'>date/time picker</a>; a <a href='https://github.com/bengourley/slugg'>module to make url safe strings</a>;
+            | and my own set of <a href='https://github.com/bengourley/merstone'>Model</a>, <a href='https://github.com/bengourley/ventnor'>View</a> and <a href='https://github.com/bengourley/chale'>Collection</a> MVC components.
+
+  .content-block
+    .content-block__center
+      .available
+        p.available__banner Available for contract/freelance work
+        p.available__strapline If you’d like to work with me, I’d love to hear from you.
+
+  .content-block
+    .content-block__center
+      .contact.grid
+        .grid__item.desk-one-third
+          p.contact__prefix Email me:
+          p.contact__detail bn@grly.me
+        .grid__item.desk-one-third
+          p.contact__prefix Call me:
+          p.contact__detail +44 (0)7837 544 562
+        .grid__item.desk-one-third
+          p.contact__prefix Tweet @me:
+          p.contact__detail @bengourley
+
+  .content-block
+    .content-block__center
+      .location
+        img.location__pin(src='/images/location-pin.svg', alt='Location')
+        p.location__town Bath
+        p.location__country UK

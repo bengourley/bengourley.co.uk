@@ -1,0 +1,32 @@
+{
+  "name": "bengourley",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "stylus -u responsive-grid source/stylesheets/index.styl -o static/css",
+    "watch-css": "stylus -u responsive-grid source/stylesheets/index.styl -o static/css -w",
+    "build-js": "browserify -d source/js/index.js -o static/js/bundle.js",
+    "watch-js": "watchify -d source/js/index.js -o static/js/bundle.js",
+    "clean": "rm -rf static/js && rm -rf static/css && mkdir -p static/js && mkdir -p static/css",
+    "build": "npm run clean && npm run build-css && npm run build-js",
+    "watch": "npm run clean && npm run watch-css & npm run watch-js & nodemon app -e js,jade",
+    "start": "nave use 4 node app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "morgan": "^1.6.1",
+    "request": "^2.69.0",
+    "responsive-grid": "^1.1.0",
+    "stylus": "^0.53.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "nodemon": "^1.8.1",
+    "watchify": "^3.7.0"
+  }
+}

@@ -1,0 +1,270 @@
+$color--grey = #3A3838
+$color--mustard = #F2D14D
+$color--off-white = #f6f7eb
+$color--white = #fff
+$color--red = #dd4e29
+$color--blue = #537db7
+
+@import 'responsive-grid'
+grid-base()
+grid-widths('', 1 2 3 4 5 6)
+
+@media (min-width: 700px)
+  grid-widths('desk', 1 2 3)
+
+*
+  padding 0
+  margin 0
+  transition opacity 0.3s ease-in-out
+  box-sizing border-box
+  font-size 16px
+
+::-moz-selection
+  background rgba($color--red, 0.3)
+
+::selection
+  background rgba($color--red, 0.3)
+
+.wf-loading *
+  opacity 0
+
+h1
+h2
+h3
+  font-weight normal
+
+img
+  max-width 100%
+
+a
+  color $color--blue
+  background rgba($color--mustard, 0.2)
+  padding 0 .25em
+
+body
+  font-family 'source-code-pro', 'Courier', monospace
+  background $color--white
+  color $color--grey
+
+.splash
+  background-color $color--grey
+  text-align center
+  height 100vh
+  min-height 800px
+  transform-style preserve-3d
+  margin-bottom 5em
+  position relative
+
+.splash__title
+  font-family 'atrament-web', 'Helvetica', sans-serif
+  text-transform uppercase
+  font-weight normal
+  color $color--mustard
+  font-size 4em
+  @media (min-width: 500px)
+    font-size 6em
+  @media (min-width: 700px)
+    font-size 9em
+  line-height 1em
+  margin-bottom 0.05em
+
+.splash__center
+  position absolute
+  width 100%
+  top 50%
+  transform translateY(-65%)
+
+.splash__subtitle
+  color $color--off-white
+  display inline-block
+
+  @media (min-width: 600px)
+    display block
+
+.splash__subtitle-bit
+  display block
+  padding .2em
+  font-size .75em
+  @media (min-width: 600px)
+    padding 0 0 0 2em
+    display inline-block
+
+    &:before
+      content '×'
+      padding-right 2.7em
+      font-style normal
+      font-size .75em
+      vertical-align middle
+
+    &:first-child
+      padding-left 0
+
+      &:before
+        content none
+        padding-right 0
+
+.content-block
+  padding 3em 2em
+  @media (min-width: 600px)
+    padding 5em 2em
+
+.content-block__center
+  margin 0 auto
+  max-width 600px
+
+.content-block__center--wide
+  margin 0 auto
+  max-width 1200px
+
+.intro
+
+  p
+    position relative
+    line-height 1.7em
+    padding-bottom 1.5em
+    font-weight 300
+    font-size 1.2em
+
+    &:after
+      content ''
+      position absolute
+      bottom 0
+      left 0
+      height 2px
+      width 3%
+      background-color $color--grey
+
+.list__title
+  border-bottom 2px solid $color--grey
+  display inline-block
+  font-weight normal
+  margin-bottom .75em
+
+.list li
+  list-style none
+  display inline-block
+  padding .25em .5em
+  background-color rgba($color--grey, .1)
+  margin 2px
+  font-size .75em
+  border-bottom 2px solid transparent
+  transition border-bottom .3s ease-in-out
+  cursor default
+
+  &:hover
+    transition border-bottom .1s ease-in-out
+    border-bottom 2px solid $color--blue
+
+    &:nth-child(2n)
+      border-bottom 2px solid $color--red
+    &:nth-child(3n)
+      border-bottom 2px solid $color--mustard
+
+.location
+  text-align center
+
+.location__pin
+  display inline-block
+  margin-bottom .5em
+
+.location__town
+  font-size 1.2em
+  text-transform uppercase
+  line-height 1
+  margin-bottom .2em
+
+.location__country
+  font-weight bold
+  font-size .75em
+  letter-spacing .1em
+  line-height 1
+
+// .location
+//   overflow hidden
+//   border 1px solid lighten($color--grey, 30%)
+//
+// .location__item
+//   border 1px solid lighten($color--grey, 30%)
+//   padding 1em
+//
+// .location__item--half
+//   width 50%
+//   float left
+
+.available
+  text-align center
+
+.available__banner
+  background $color--blue
+  color $color--white
+  padding 1em .5em
+  font-weight 300
+  font-size 1.25em
+  line-height 1
+  text-transform uppercase
+  margin-bottom .5em
+
+  &:before
+  &:after
+    content '×'
+    font-size .5em
+    padding .5em 1em
+    vertical-align middle
+
+.available__strapline
+  font-size .75em
+
+.card
+  margin-bottom 2em
+
+.card__description
+  font-size .75em
+  line-height 1.7
+
+.card__title
+  margin .5em 0
+
+.contact
+  text-align center
+
+.contact__prefix
+  display inline-block
+  font-size .75em
+  text-transform uppercase
+  border-bottom 2px solid $color--grey
+  margin-bottom 1em
+
+.contact__detail
+  margin-bottom 2em
+
+  @media (min-width: 800px)
+    margin-bottom 0
+
+.footer
+  border-top 1px solid lighten($color--grey, 80%)
+  font-size .75em
+  padding 3em 0
+  font-weight 300
+  text-align center
+
+.open-source
+  text-align center
+
+.open-source__center
+  display inline-block
+  font-weight 300
+  border 1px solid lighten($color--grey, 80%)
+  border-left none
+  border-right none
+  padding 1em
+
+  .lead
+  .lead a
+    font-size 1em
+
+  .lead
+    margin-bottom .5em
+
+  p
+  p a
+    font-size .75em
