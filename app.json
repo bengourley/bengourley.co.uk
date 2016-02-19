@@ -1,6 +1,7 @@
 {
   "name": "bengourley",
-  "script": "nave use 4 node app",
+  "script": "app.js",
+  "exec_interpreter": "/root/.nave/installed/4.3.1/bin/node",
   "instances": 1,
   "env": {
     "NODE_ENV": "production",
