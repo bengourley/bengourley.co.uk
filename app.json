@@ -1,7 +1,6 @@
 {
   "name": "bengourley",
   "script": "app.js",
-  "exec_interpreter": "/root/.nave/installed/4.3.1/bin/node",
   "instances": 1,
   "env": {
     "NODE_ENV": "production",
